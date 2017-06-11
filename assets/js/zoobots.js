@@ -41,6 +41,13 @@ window.Zoobots = {
     $('.application-steps').slick({
       dots: true
     });
+
+    $('.testimonial-slider').slick({
+      autoPlay: true,
+      autoplaySpeed: 2000,
+      infinite: true,
+      dots: true
+    });
   }
 
   function _initContactForm() {
