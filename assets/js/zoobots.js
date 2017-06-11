@@ -6,7 +6,31 @@ window.Zoobots = {
   (function main() {
     _initContactForm();
     Zoobots.onProductClick = handleProductClick;
+    Zoobots.onNavigationClick = handleNavigationClick;
   })();
+
+  /*
+   * PUBLIC API
+   */
+
+  function handleProductClick(event) {
+    var element = $(event.currentTarget),
+      productName = element.data('product-name');
+
+    ga('send', 'event', {
+      eventCategory: 'Product Interest',
+      eventAction: 'click',
+      eventLabel: productName
+    });
+  }
+
+  function handleNavigationClick(event, elementId) {
+    event.preventDefault();
+
+    return $('html, body').animate({
+      scrollTop: $("#" + elementId).offset().top
+    }, 300);
+  }
 
   /*
    * PRIVATE API
@@ -35,19 +59,6 @@ window.Zoobots = {
       // prevent the form from submitting until we have an actual email
       // sender on the back end
       return event.preventDefault();
-    });
-  }
-
-  function handleProductClick(event) {
-    var element = $(event.currentTarget),
-      productName = element.data('product-name');
-
-    debugger;
-
-    ga('send', 'event', {
-      eventCategory: 'Product Interest',
-      eventAction: 'click',
-      eventLabel: productName
     });
   }
 })(jQuery);
