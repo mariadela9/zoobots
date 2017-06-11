@@ -1,3 +1,9 @@
+#brand {
+  text-transform: uppercase;
+  margin-right: 50px;
+  font-size: 130%;
+}
+
 #banner #logo {
   max-width: 100%;
 }
@@ -54,8 +60,25 @@
   text-decoration: none;
 }
 
-#brand {
-  text-transform: uppercase;
-  margin-right: 50px;
-  font-size: 130%;
+.application-steps {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/*
+ * Slick overrides
+ */
+
+.slick-dots li button {
+  background: transparent !important;
+}
+
+.slick-arrow, .slick-arrow:before {
+  background: transparent !important;
+  color: #444 !important;
+  font-size: 30px;
+}
+
+.slick-prev {
+  left: -35px;
 }

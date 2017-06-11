@@ -5,6 +5,7 @@ window.Zoobots = {
 (function ($) {
   (function main() {
     _initContactForm();
+    _initSliders();
     Zoobots.onProductClick = handleProductClick;
     Zoobots.onNavigationClick = handleNavigationClick;
   })();
@@ -35,6 +36,13 @@ window.Zoobots = {
   /*
    * PRIVATE API
    */
+
+  function _initSliders() {
+    $('.application-steps').slick({
+      centerMode: true,
+      dots: true
+    });
+  }
 
   function _initContactForm() {
     var contactForm = $('#contact-form');
