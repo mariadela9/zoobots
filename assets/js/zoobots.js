@@ -39,7 +39,6 @@ window.Zoobots = {
 
   function _initSliders() {
     $('.application-steps').slick({
-      centerMode: true,
       dots: true
     });
   }
