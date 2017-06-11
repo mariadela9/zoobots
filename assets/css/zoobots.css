@@ -96,3 +96,7 @@
 .product {
   margin-bottom: 80px;
 }
+
+.product button {
+  padding: 0 10px;
+}
