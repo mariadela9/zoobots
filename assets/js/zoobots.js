@@ -5,6 +5,7 @@ window.Zoobots = {
 (function ($) {
   (function main() {
     _initContactForm();
+    Zoobots.onProductClick = handleProductClick;
   })();
 
   /*
@@ -34,6 +35,19 @@ window.Zoobots = {
       // prevent the form from submitting until we have an actual email
       // sender on the back end
       return event.preventDefault();
+    });
+  }
+
+  function handleProductClick(event) {
+    var element = $(event.currentTarget),
+      productName = element.data('product-name');
+
+    debugger;
+
+    ga('send', 'event', {
+      eventCategory: 'Product Interest',
+      eventAction: 'click',
+      eventLabel: productName
     });
   }
 })(jQuery);
