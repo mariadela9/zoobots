@@ -2,9 +2,16 @@
   max-width: 100%;
 }
 
-#tagline {
-  font-size: 32px;
+#banner, #banner b {
   color: #444;
+}
+
+.tagline {
+  font-size: 32px;
+  line-height: 1.15;
+  margin: 30px auto;
+  max-width: 1000px;
+  padding: 0;
 }
 
 .products img {
